@@ -1,0 +1,20 @@
+  {
+            name: "Kevin Durant",
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Kevin_Durant_%28Wizards_v._Warriors%2C_1-24-2019%29_%28cropped%29.jpg/330px-Kevin_Durant_%28Wizards_v._Warriors%2C_1-24-2019%29_%28cropped%29.jpg",
+            age: 36,
+            team: "Brooklyn Nets",
+        },
+        {
+            name: "Giannis Antetokounmpo",
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Giannis_Antetokounmpo_%2824845003687%29_%28cropped%29.jpg/375px-Giannis_Antetokounmpo_%2824845003687%29_%28cropped%29.jpg",
+            age: 36,
+            team: "Milwaukee Bucks",
+        },
+
+
+
+
+        interface IProps {
+    people: Props["players"];
+    setPeople: React.Dispatch<React.SetStateAction<Props["players"]>>;
+}

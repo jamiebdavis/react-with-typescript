@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import AddToList from "./components/AddToList";
+import List from "./components/List";
+import React from "react";
+
+export interface IState {
+    players: {
+        name: string;
+        url: string;
+        age: number;
+        team?: string;
+    }[];
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [players, setPlayers] = React.useState<IState["players"]>([
+        {
+            name: "Kevin Durant",
+            url: "https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png",
+            age: 36,
+            team: "Brooklyn Nets",
+        },
+    ]);
+
+    return (
+        <div className="App">
+            <h1>NBA MVPs </h1>
+            <List players={players} />
+            <AddToList players={players} setPlayers={setPlayers} />
+        </div>
+    );
 }
 
 export default App;
